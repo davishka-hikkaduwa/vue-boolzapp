@@ -26,29 +26,45 @@ body {
 
 
 #logged-user,
-#notifications,
-#search,
 #selected-contact,
 #send-msgs {
+    height: 8vh;
+}
+
+#logged-user,
+#selected-contact {
+    background-color: #eaeaea;
+
+}
+
+#send-msgs {
+    background-color: #f3eeea;
+}
+
+#search {
+    height: 6vh;
+    background-color: #fafafb;
+}
+
+#notifications {
     height: 10vh;
+    background-color: #8edafc;
 }
 
 #contacts {
-    height: 70vh;
+    height: calc(100vh - (8vh + 6vh + 10vh));
 }
 
 
 #received-side,
 #sent-side {
-    height: 80vh;
-    /* width: 100%; */
-    /* background-image: url("/img/mine.jpg"); */
+    height: calc(100vh - (8vh + 8vh));
 }
 
 #exchanged-msgs {
-    background-image: url("/img/mine.jpg");
-    background-repeat: no-repeat;
+    background-image: url('../img/mine.jpg');
 }
+
 
 
 /* color-coded msgs */
