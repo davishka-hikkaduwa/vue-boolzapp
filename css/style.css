@@ -85,3 +85,29 @@ body {
 }
 
 /* /color-coded msgs */
+
+
+.my-avatar-img {
+    height: 50px;
+}
+
+.fa-solid,
+.fa-regular {
+    color: #b0b1b1;
+    font-size: 1.4rem;
+}
+
+#notifications .fa-solid.fa-bell-slash {
+    color: #8edafc;
+    background-color: #ffffff;
+    font-size: 1.4rem;
+}
+
+#notifications p:first-child {
+    font-size: 0.9rem;
+}
+
+#notifications p:last-child {
+    color: #727272;
+    font-size: 0.7rem;
+}

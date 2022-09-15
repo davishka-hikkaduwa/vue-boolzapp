@@ -34,24 +34,36 @@
                     <div id="logged-user" class="row">
                         <div class="col">
                             <div class="row">
-                                <div class="col-3">
-                                    <!-- <img src="img/avatar_io.jpg" class="img-fluid" alt="avatar_io"> -->
+                                <div class="col-2 py-2 ps-2">
+                                    <img src="img/avatar_io.jpg" class="my-avatar-img rounded-circle" alt="avatar_io">
                                 </div>
-                                <div class="col-6"></div>
-                                <div class="col-3"></div>
+                                <div class="col-6 py-3 px-0 m-0">Sofia</div>
+                                <div class="col-4 py-3 d-flex justify-content-around">
+                                    <i class="fa-solid fa-circle-notch"></i>
+                                    <i class="fa-solid fa-message"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- notifications -->
                     <div id="notifications" class="row">
-                        <div class="col">
-                            <p class="debug">notifications</p>
+                        <div class="col-2 p-3">
+                            <i class="fa-solid fa-bell-slash rounded-circle p-2"></i>
+                        </div>
+                        <div class="col-10 py-3">
+                            <p class="m-0">Ricevi notifiche di nuovi messaggi</p>
+                            <p class="m-0"><u>Attiva notifiche desktop</u></p>
                         </div>
                     </div>
                     <!-- search -->
                     <div id="search" class="row">
-                        <div class="col">
-                            <p class="debug">search</p>
+                        <div class="col input-group my-1">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
+                                aria-label="inizia-chat">
                         </div>
                     </div>
                     <!-- contacts -->
@@ -78,8 +90,14 @@
                 <div class="col-8 border border-warning">
                     <!-- selected-contact -->
                     <div id="selected-contact" class="row">
-                        <div class="col">
-                            <p class="debug">selected-contact</p>
+                        <div class="col-2 py-3">
+                            <img src="#" alt="#">
+                        </div>
+                        <div class="col-8 py-3">#selected-chat</div>
+                        <div class="col-2 py-3 d-flex justify-content-around">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
                     <!-- exchanged-msgs -->
@@ -97,8 +115,14 @@
                     </div>
                     <!-- send-msgs -->
                     <div id="send-msgs" class="row">
-                        <div class="col">
-                            <p class="debug">send-msg</p>
+                        <div class="col-2 py-3 d-flex justify-content-center">
+                            <i class="fa-regular fa-face-smile"></i>
+                        </div>
+                        <div class="col-8 py-2 px-0 form-group">
+                            <input type="text" class="form-control py-2" placeholder="Scrivi un messaggio">
+                        </div>
+                        <div class="col-2 py-3 d-flex justify-content-center">
+                            <i class="fa-solid fa-microphone"></i>
                         </div>
                     </div>
                 </div>
