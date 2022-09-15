@@ -1,5 +1,5 @@
 console.log('JS OK!');
-
+/*
 contacts: [{
     name: 'Michele',
     avatar: '_1',
@@ -89,3 +89,4 @@ contacts: [{
 
 
 ]
+*/

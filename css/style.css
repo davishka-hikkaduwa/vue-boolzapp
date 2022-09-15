@@ -1,3 +1,5 @@
+/* ------ GENERAL ------ */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,3 +9,47 @@
 body {
     font-family: sans-serif;
 }
+
+/* ------ DEBUG ------ */
+.debug {
+    color: red;
+}
+
+/* ------ /DEBUG ------ */
+
+
+
+
+.container-fluid .row {
+    height: 100vh;
+}
+
+
+#logged-user,
+#notifications,
+#search,
+#selected-contact,
+#send-msgs {
+    height: 10vh;
+}
+
+#contacts {
+    height: 70vh;
+}
+
+#exchanged-msgs {
+    height: 80vh;
+}
+
+
+/* color-coded msgs */
+
+.sent-msg {
+    background-color: #d5f9ba;
+}
+
+.received-msg {
+    background-color: #ffffff;
+}
+
+/* /color-coded msgs */
