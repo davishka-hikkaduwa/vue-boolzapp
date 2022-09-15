@@ -51,23 +51,50 @@
                     <!-- contacts -->
                     <div id="contacts" class="row border border-primary">
                         <div class="col">
-                            <p class="debug">contacts</p>
+                            <div class="row contact-card">
+                                <div class="col-3">
+                                    <img src="#" alt="#">
+                                </div>
+                                <div class="col-9">
+                                    <h5>Name</h5>
+                                    <p>Ultimo messaggio inviato</p>
+                                </div>
+                            </div>
+                            <div class="row contact-card">
+                                <div class="col-3">
+                                    <img src="#" alt="#">
+                                </div>
+                                <div class="col-9">
+                                    <h5>Name</h5>
+                                    <p>Ultimo messaggio inviato</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!---------- CHAT column ---------->
                 <div class="col-8">
+                    <!-- selected-contact -->
                     <div id="selected-contact" class="row border border-primary">
                         <div class="col">
                             <p class="debug">selected-contact</p>
                         </div>
                     </div>
+                    <!-- exchanged-msgs -->
                     <div id="exchanged-msgs" class="row border border-primary">
                         <div class="col">
-                            <p class="debug">exchanged-msgs</p>
+                            <div class="row overflow-auto">
+                                <div id="received-side" class="col px-5 py-4">
+                                    <div class="received-msg cloud">Ciao</div>
+                                </div>
+                                <div id="sent-side" class="col px-5 py-4">
+                                    <div class="sent-msg cloud">Ciao</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- send-msgs -->
                     <div id="send-msgs" class="row border border-primary">
                         <div class="col">
                             <p class="debug">send-msg</p>

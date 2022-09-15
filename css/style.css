@@ -20,7 +20,7 @@ body {
 
 
 
-.container-fluid .row {
+.container-fluid {
     height: 100vh;
 }
 
@@ -37,19 +37,33 @@ body {
     height: 70vh;
 }
 
-#exchanged-msgs {
+
+#received-side,
+#sent-side {
     height: 80vh;
+    /* width: 100%; */
+}
+
+#exchanged-msgs {
+    background-color: tan;
 }
 
 
 /* color-coded msgs */
 
-.sent-msg {
+.sent-msg.cloud {
     background-color: #d5f9ba;
 }
 
-.received-msg {
+.received-msg.cloud {
     background-color: #ffffff;
+}
+
+.cloud {
+    /* border: 1px solid grey; */
+    border-radius: 8px;
+    padding: 10px 8px;
+
 }
 
 /* /color-coded msgs */
