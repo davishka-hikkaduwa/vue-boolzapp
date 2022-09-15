@@ -42,10 +42,12 @@ body {
 #sent-side {
     height: 80vh;
     /* width: 100%; */
+    /* background-image: url("/img/mine.jpg"); */
 }
 
 #exchanged-msgs {
-    background-color: tan;
+    background-image: url("/img/mine.jpg");
+    background-repeat: no-repeat;
 }
 
 
