@@ -71,7 +71,8 @@
                         <div class="col">
 
                             <div class="row contact-card border-bottom d-flex align-items-center"
-                                v-for="contact in contacts">
+                                v-for="(contact, index) in contacts" :class="{ active: index === activeIndex }"
+                                @click="setActiveContact(index)">
                                 <div class="col-3">
                                     <img :src="`img/avatar${contact.avatar}.jpg`" class="img-fluid rounded-circle"
                                         :alt="`avatar${contact.avatar}`">
@@ -90,10 +91,11 @@
                 <div class="col-8 border border-warning">
                     <!-- selected-contact -->
                     <div id="selected-contact" class="row">
-                        <div class="col-2 py-3">
-                            <img src="#" alt="#">
+                        <div class="col-1 py-1">
+                            <img :src="'img/avatar' + contacts[activeIndex].avatar + '.jpg'"
+                                :alt="contacts[activeIndex].name" class="rounded-circle">
                         </div>
-                        <div class="col-8 py-3">#selected-chat</div>
+                        <div class="col-9 py-3">{{contacts[activeIndex].name}}</div>
                         <div class="col-2 py-3 d-flex justify-content-around">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <i class="fa-solid fa-paperclip"></i>
@@ -101,17 +103,31 @@
                         </div>
                     </div>
                     <!-- exchanged-msgs -->
-                    <div id="exchanged-msgs" class="row">
+                    <div id="exchanged-msgs" class="row overflow-auto">
                         <div class="col">
-                            <div class="row overflow-auto">
+                            <div class="row mx-3 message" v-for="item in contacts[activeIndex].messages">
+                                {{ item.status === 'sent' ? 'sent' : 'received' }},
+
+                                <div class="sent-msg cloud col-4 px-3 py-2 my-3">
+                                    <!-- use dynamic class to choose between received or sent msg -->
+                                    {{ item.message }}
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- <div class="row overflow-auto">
                                 <div id="received-side" class="col px-5 py-4">
-                                    <div class="received-msg cloud">Ciao</div>
+                                    <div class="received-msg cloud message"
+                                        v-for="item in contacts[activeIndex].messages">
+                                        {{ item.message }}
+                                    </div>
                                 </div>
                                 <div id="sent-side" class="col px-5 py-4">
                                     <div class="sent-msg cloud">Ciao</div>
                                 </div>
-                            </div>
-                        </div>
+                            </div> -->
+
                     </div>
                     <!-- send-msgs -->
                     <div id="send-msgs" class="row">

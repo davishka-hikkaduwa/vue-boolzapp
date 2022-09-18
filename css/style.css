@@ -52,29 +52,39 @@ body {
 }
 
 #contacts {
-    height: calc(100vh - (8vh + 6vh + 10vh));
+    height: calc(100vh - (8vh + 6vh + 10vh + 2px));
 }
 
 
-#received-side,
+/* #received-side,
 #sent-side {
-    height: calc(100vh - (8vh + 8vh));
+    height: calc(100vh - (8vh + 8vh + 2px));
+} */
+
+#exchanged-msgs {
+    height: calc(100vh - (8vh + 8vh + 2px));
+    /* max-width: 100vw; */
 }
 
 #exchanged-msgs {
     background-image: url('../img/mine.jpg');
 }
 
-
+.contact-card.active {
+    background-color: #e9ebec;
+}
 
 /* color-coded msgs */
 
-.sent-msg.cloud {
+
+.sent-msg {
+    justify-content: flex-end;
     background-color: #d5f9ba;
 }
 
-.received-msg.cloud {
-    background-color: #ffffff;
+.received-msg {
+    justify-content: flex-start;
+    background-color: #d32d2d;
 }
 
 .cloud {
@@ -103,6 +113,10 @@ body {
     font-size: 1.4rem;
 }
 
+#search .fa-solid {
+    font-size: 1rem;
+}
+
 #notifications p:first-child {
     font-size: 0.9rem;
 }
@@ -111,3 +125,11 @@ body {
     color: #727272;
     font-size: 0.7rem;
 }
+
+#selected-contact img {
+    height: 50px;
+}
+
+/* #selected-contact {
+    color: black;
+} */

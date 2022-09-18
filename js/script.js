@@ -165,12 +165,24 @@ const contacts = [
 ]
 
 
+console.log(contacts);
+
 const app = new Vue({
     el: '#app',
     data: {
         contacts,
+        activeIndex: 0,
     },
     methods: {
-
+        setActiveContact(index) {
+            this.activeIndex = index;
+        },
+        // msgSentOrReceived() {
+        //     if (messages.status === sent) {
+        //         console.log('sent');
+        //     } else {
+        //         console.log('received');
+        //     }
+        // }
     }
 })
