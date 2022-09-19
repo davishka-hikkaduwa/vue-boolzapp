@@ -55,6 +55,9 @@ body {
     height: calc(100vh - (8vh + 6vh + 10vh + 2px));
 }
 
+.contact-card.active {
+    background-color: #e9ebec;
+}
 
 /* #received-side,
 #sent-side {
@@ -70,31 +73,42 @@ body {
     background-image: url('../img/mine.jpg');
 }
 
-.contact-card.active {
-    background-color: #e9ebec;
-}
+
 
 /* color-coded msgs */
 
+#exchanged-msgs .col {
+    display: flex;
+    flex-direction: column;
+}
 
-.sent-msg {
+.sent {
     justify-content: flex-end;
     background-color: #d5f9ba;
+    align-self: flex-end;
+
 }
 
-.received-msg {
+
+.received {
     justify-content: flex-start;
-    background-color: #d32d2d;
+    background-color: #ffffff;
+    align-self: flex-start;
+
 }
 
-.cloud {
-    /* border: 1px solid grey; */
+.message {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
     border-radius: 8px;
-    padding: 10px 8px;
-
 }
 
-/* /color-coded msgs */
+.message-time {
+    text-align: right;
+    font-size: 0.6rem;
+    color: #b0b1b1;
+}
 
 
 .my-avatar-img {
@@ -133,3 +147,6 @@ body {
 /* #selected-contact {
     color: black;
 } */
+
+
+.message-time {}

@@ -172,17 +172,58 @@ const app = new Vue({
     data: {
         contacts,
         activeIndex: 0,
+        newMessage: "",
     },
     methods: {
         setActiveContact(index) {
             this.activeIndex = index;
+
         },
-        // msgSentOrReceived() {
-        //     if (messages.status === sent) {
-        //         console.log('sent');
-        //     } else {
-        //         console.log('received');
-        //     }
-        // }
+        sendMessage() {
+            // console.log(this.newMessage);
+            const selectedContact = this.contacts[this.activeIndex];
+            selectedContact.messages.push({
+                date: this.getNow(),
+                message: this.newMessage,
+                status: "sent",
+            });
+            this.newMessage = "";
+            setTimeout(() => {
+                selectedContact.messages.push({
+                    date: this.getNow(),
+                    message: "OK!",
+                    status: "received",
+                });
+            }, 2000)
+        },
+        getHoursMinutes(dateToFormat) {
+            // dateToFormat = "10/01/2020 15:30:55"
+            const array = dateToFormat.split(" "); // ["10/01/2020", "15:30:55"]
+            const hours = array[1];  // "15:30:55"
+            const arrayTime = hours.split(":"); // ["15", "30", "55"]
+            const hoursMinutes = arrayTime[0] + ":" + arrayTime[1]; // "15:30"
+
+            return hoursMinutes;
+        },
+
+
+        getNow() {
+            const now = new Date();
+            console.log(now.getHours() + ':' + now.getMinutes());
+
+            const hours = this.formatDatePart(now.getHours());
+            const minutes = this.formatDatePart(now.getMinutes());
+            const seconds = this.formatDatePart(now.getSeconds());
+
+            const day = this.formatDatePart(now.getDay());
+            const month = this.formatDatePart(now.getMonth());
+            console.log(month);
+            const year = now.getFullYear();
+            return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+
+        },
+        formatDatePart(datePart) {
+            return datePart < 10 ? '0' + datePart : '' + datePart
+        },
     }
 })
